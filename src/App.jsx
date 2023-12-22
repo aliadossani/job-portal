@@ -1,18 +1,28 @@
-import Navbar from "./components/navbar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import './App.css'
+import AboutPage from './Pages/AboutPage'
+import Error404Page from './Pages/Error404Page'
+import HomePage from './Pages/HomePage'
+import { Routes, Route } from "react-router-dom"
+import JobDetailsPage from './Pages/JobDetailsPage'
+import LoginPage from './Pages/LoginPage'
 
-const App = () => {
+function App() {
+
+
   return (
-    <Router>
+    <>
       <div>
-        <Navbar />
         <Routes>
-          <Route path="/LogIn" />
-          <Route path="/SignIn" />
+          <Route path="/" element={<HomePage />} />
+          <Route path="//login" element={<LoginPage />} />
+          <Route path="/job/jobDetails/:id" element={<JobDetailsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<Error404Page />} />
         </Routes>
       </div>
-    </Router>
-  );
-};
 
-export default App;
+    </>
+  )
+}
+
+export default App
