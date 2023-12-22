@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import classes from "../styles/Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = ({ isLoggedIn, userEmail }) => {
   return (
     <nav className={classes.navbar}>
 
@@ -11,7 +11,13 @@ const Navbar = () => {
           <Link to="/"><img className={classes.logo} src={logo} /></Link>
         </div>
         <div className={classes.navElements}>
-          <Link to="/login">LogIn</Link>
+          {
+            isLoggedIn
+              ?
+              <p>{userEmail}</p>
+              :
+              <Link to="/login">LogIn</Link>
+          }
         </div>
       </div>
 

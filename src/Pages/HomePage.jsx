@@ -1,13 +1,21 @@
-import { Link } from "react-router-dom";
-import LoginPage from "./LoginPage";
-// import Navbar from "../components/Navbar";
+import JobCard from "../components/JobCard";
 
-const HomePage = () => {
+const HomePage = ({ jobList }) => {
+    if (!jobList?.length) {
+        return null;
+    }
     return (
         <div>
             <h1>HomePage</h1>
-            {/* <Link to="/login" element={<LoginPage />}>Login</Link> */}
-            {/* <Navbar /> */}
+            <div className="jobsContainer">
+                {
+                    jobList.map((job) => {
+                        return (
+                            <JobCard job={job} key={job.jobId} />
+                        )
+                    })
+                }
+            </div>
         </div>
     );
 }
