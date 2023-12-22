@@ -1,25 +1,20 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import "./navbar.css";
+import classes from "../styles/Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="container">
+    <nav className={classes.navbar}>
+
+      <div className={classes.container}>
         <div>
-          <img className="logo" src={logo} />
+          <Link to="/"><img className={classes.logo} src={logo} /></Link>
         </div>
-        <div className="nav-elements">
-          <ul>
-            <li>
-              <Link to="/LogIn">LogIn</Link>
-            </li>
-            <li>
-              <Link to="/SignIn">SignIn</Link>
-            </li>
-          </ul>
+        <div className={classes.navElements}>
+          <Link to="/login">LogIn</Link>
         </div>
       </div>
+
     </nav>
   );
 };
