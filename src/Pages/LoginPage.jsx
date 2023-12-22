@@ -1,19 +1,19 @@
 import { useState } from "react";
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 
 
 const LoginPage = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const history = useHistory();
+    // const history = useHistory();
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const username = event.target.elements.username.value;
-        const password = event.target.elements.password.value;
-        
-        username === "alia@gmail.com" && password === "1234" ?  history.push('/') : alert('Invalid username! Please enter a valid username and password');
-        
-       
+        // const username = event.target.elements.username.value;
+        // const password = event.target.elements.password.value;
+
+        // username === "alia@gmail.com" && password === "1234" ? history.push('/') : alert('Invalid username! Please enter a valid username and password');
+        console.log("Success");
+
     }
     return (
         <form onSubmit={handleSubmit}>

@@ -1,4 +1,4 @@
-import "./App.css";
+
 import AboutPage from "./Pages/AboutPage";
 import Error404Page from "./Pages/Error404Page";
 import HomePage from "./Pages/HomePage";
