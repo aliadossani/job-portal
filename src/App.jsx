@@ -13,6 +13,7 @@ function App() {
     <>
       <div>
         <Navbar />
+
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<Error404Page />} />
         </Routes>
+
         <div className="main-cnt">
           <Sidebar />
           <div className="content">{/* main content goes here */}</div>

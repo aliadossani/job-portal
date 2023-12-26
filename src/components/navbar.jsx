@@ -5,16 +5,57 @@ import classes from "../styles/Navbar.module.css";
 const Navbar = () => {
   return (
     <nav className={classes.navbar}>
-
       <div className={classes.container}>
         <div>
-          <Link to="/"><img className={classes.logo} src={logo} /></Link>
+          <Link to="/">
+            <img className={classes.logo} src={logo} />
+          </Link>
         </div>
+        <div className="searchSelect">
+          <select>
+            <option value="" disabled hidden selected>
+              Job Role
+            </option>
+            <option value="Frontend Developer">Frontend Developer</option>
+            <option value="Backened Developer">Backened Developer</option>
+            <option value="Andriod Developer">Andriod Developer</option>
+            <option value="iOS Developer">iOS Developer</option>
+          </select>
+          <select>
+            <option value="" disabled hidden selected>
+              Location
+            </option>
+            <option value="Remote">Remote</option>
+            <option value="In-Office">In-Office</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
+          <select>
+            <option value="" disabled hidden selected>
+              Experience
+            </option>
+            <option value="Fresher">Fresher</option>
+            <option value="Junior">Junior</option>
+            <option value="Mid-level">Mid-level</option>
+            <option value="Senior">Senior</option>
+          </select>
+          <select>
+            <option value="" disabled hidden selected>
+              JobType
+            </option>
+            <option value="Full-time">Fresher</option>
+            <option value="Part-time">Junior</option>
+            <option value="Contract">Mid-level</option>
+          </select>
+        </div>
+
         <div className={classes.navElements}>
           <Link to="/login">LogIn</Link>
         </div>
+        <div>
+          <input type="text" placeholder="Search" />
+          <button type="button">Search</button>
+        </div>
       </div>
-
     </nav>
   );
 };
