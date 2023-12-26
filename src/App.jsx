@@ -7,6 +7,7 @@ import LoginPage from "./Pages/LoginPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
+import JobCard from "./components/JobCard";
 
 function App() {
   return (
@@ -23,8 +24,11 @@ function App() {
         </Routes>
 
         <div className="main-cnt">
-          <Sidebar />
-          <div className="content">{/* main content goes here */}</div>
+          {/* <Sidebar />*/}
+          <div className="content">
+            <JobCard />
+            <JobCard />
+          </div>
         </div>
         <Footer />
       </div>

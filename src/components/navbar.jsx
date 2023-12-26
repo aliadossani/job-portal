@@ -11,7 +11,7 @@ const Navbar = () => {
             <img className={classes.logo} src={logo} />
           </Link>
         </div>
-        <div className="searchSelect">
+        <div className={classes.searchSelect}>
           <select>
             <option value="" disabled hidden selected>
               Job Role
@@ -23,7 +23,7 @@ const Navbar = () => {
           </select>
           <select>
             <option value="" disabled hidden selected>
-              Location
+              Work-Mode
             </option>
             <option value="Remote">Remote</option>
             <option value="In-Office">In-Office</option>
@@ -46,14 +46,16 @@ const Navbar = () => {
             <option value="Part-time">Junior</option>
             <option value="Contract">Mid-level</option>
           </select>
+          <div>
+            {/* <input type="text" placeholder="Search" />*/}
+            <button className="Button" type="button">
+              Search
+            </button>
+          </div>
         </div>
 
         <div className={classes.navElements}>
           <Link to="/login">LogIn</Link>
-        </div>
-        <div>
-          <input type="text" placeholder="Search" />
-          <button type="button">Search</button>
         </div>
       </div>
     </nav>
