@@ -63,6 +63,11 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #17bcf3;
   }
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: #17bcf3;
 }

@@ -1,4 +1,3 @@
-
 import AboutPage from "./Pages/AboutPage";
 import Error404Page from "./Pages/Error404Page";
 import HomePage from "./Pages/HomePage";
@@ -21,7 +20,10 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<Error404Page />} />
         </Routes>
-        <Sidebar />
+        <div className="main-cnt">
+          <Sidebar />
+          <div className="content">{/* main content goes here */}</div>
+        </div>
         <Footer />
       </div>
     </>
