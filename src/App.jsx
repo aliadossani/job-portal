@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import JobCard from "./components/JobCard";
+import FetchData from "./components/FetchData";
 
 function App() {
   return (
@@ -25,10 +26,8 @@ function App() {
 
         <div className="main-cnt">
           {/* <Sidebar />*/}
-          <div className="content">
-            <JobCard />
-            <JobCard />
-          </div>
+          <FetchData />
+          <div className="content">{/*<JobCard /> */}</div>
         </div>
         <Footer />
       </div>
