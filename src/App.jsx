@@ -40,7 +40,7 @@ function App() {
         </Routes>
 
         <div className="main-cnt">
-          {/* <Sidebar />*/}
+          <Sidebar />
           {/* <FetchData /> */}
           <div className="content">{/*<JobCard /> */}</div>
         </div>
