@@ -18,7 +18,7 @@ function App() {
   const [jobs, setJobs] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
-  
+
   useEffect(() => {
     const getJobs = async () => {
       const response = await axios.get("http://localhost:8000/jobs");
@@ -41,7 +41,7 @@ function App() {
 
         <div className="main-cnt">
           {/* <Sidebar />*/}
-          <FetchData />
+          {/* <FetchData /> */}
           <div className="content">{/*<JobCard /> */}</div>
         </div>
         <Footer />
