@@ -1,0 +1,71 @@
+.linkCtn {
+    text-decoration: none;
+}
+
+.jobCardContainer {
+
+    border: solid #e0e0e0;
+    border-width: 1px 1px 3px;
+    background-color: #fff;
+    background-image: linear-gradient(178deg, #fafafa, #fff 35%);
+    background-size: 100% 300px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 4px;
+    margin: 16px;
+    padding: 16px;
+    position: relative;
+    color: #050c26;
+}
+
+.companyImageContainer {
+    margin-right: 10px;
+}
+
+.jobCardHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.companyImage {
+    width: 50px;
+    object-fit: contain;
+}
+
+
+.jobPositionDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid #e0e0e0;
+    border-width: 1px 1px 3px;
+    padding: 10px;
+}
+
+.btnContainer {
+    padding: 8px 16px 8px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-width: 0;
+    min-height: 0;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.saveCtn {
+
+    border-radius: 0.5px;
+    background-color: #f9f9f9;
+}
+
+.learnMoreCtn {
+
+    background-color: black;
+    color: white;
+    border-radius: 0.5px;
+}

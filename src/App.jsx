@@ -16,8 +16,7 @@ function App() {
   const [jobs, setJobs] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
-  console.log({ isLoggedIn, userEmail });
-
+  
   useEffect(() => {
     const getJobs = async () => {
       const response = await axios.get("http://localhost:8000/jobs");
@@ -33,7 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage jobList={jobs} />} />
           <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} setUserEmail={setUserEmail} />} />
-          <Route path="/job/jobDetails/:id" element={<JobDetailsPage />} />
+          <Route path="/job/jobDetails/:id" element={<JobDetailsPage jobList={jobs} />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<Error404Page />} />
         </Routes>

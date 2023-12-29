@@ -25,6 +25,7 @@ body {
   background-color: #fef7e5;
   display: flex;
   flex-direction: row;
+  z-index: 1;
 
 }
 
