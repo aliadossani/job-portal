@@ -1,18 +1,28 @@
-import { useState } from "react";
-// import { useHistory } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-
-const LoginPage = () => {
+const LoginPage = ({ setIsLoggedIn, setUserEmail, isLoggedIn }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    // const history = useHistory();
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            navigate("/");
+        }
+    }, []);
+
     const handleSubmit = async (event) => {
         event.preventDefault();
-        // const username = event.target.elements.username.value;
-        // const password = event.target.elements.password.value;
+        if (username === "alia@gmail.com" && password === "1234") {
+            setIsLoggedIn(true);
+            setUserEmail(username);
+            navigate("/");
 
-        // username === "alia@gmail.com" && password === "1234" ? history.push('/') : alert('Invalid username! Please enter a valid username and password');
-        console.log("Success");
+        } else {
+            alert("Please enter a valid email and Password");
+        }
 
     }
     return (
