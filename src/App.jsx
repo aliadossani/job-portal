@@ -14,6 +14,8 @@ import Sidebar from "./components/Sidebar";
 import JobCard from "./components/JobCard";
 import FetchData from "./components/FetchData";
 
+import classes from "./styles/App.module.css";
+
 function App() {
   const [jobs, setJobs] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -31,18 +33,18 @@ function App() {
     <>
       <div>
         <Navbar isLoggedIn={isLoggedIn} userEmail={userEmail} />
-        <Routes>
-          <Route path="/" element={<HomePage jobList={jobs} />} />
-          <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} setUserEmail={setUserEmail} />} />
-          <Route path="/job/jobDetails/:id" element={<JobDetailsPage jobList={jobs} />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="*" element={<Error404Page />} />
-        </Routes>
 
-        <div className="main-cnt">
+        <div className={classes.mainCnt}>
+          <div className={classes.routesContainer}>
+            <Routes>
+              <Route path="/" element={<HomePage jobList={jobs} />} />
+              <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} setUserEmail={setUserEmail} />} />
+              <Route path="/job/jobDetails/:jobId" element={<JobDetailsPage jobList={jobs} />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="*" element={<Error404Page />} />
+            </Routes>
+          </div>
           <Sidebar />
-          {/* <FetchData /> */}
-          <div className="content">{/*<JobCard /> */}</div>
         </div>
         <Footer />
       </div>

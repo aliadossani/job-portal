@@ -8,10 +8,14 @@ const JobDetailsPage = ({ jobList }) => {
 
     useEffect(() => {
         const currentJobDetails = jobList.find(
-            (job) => job.id === jobId
+            (job) => job.jobId == jobId
         );
         setJobDetails(currentJobDetails);
-    }, [jobId]);
+    }, []);
+
+    if (!jobDetails) {
+        return null;
+    }
 
     return (
         <div>

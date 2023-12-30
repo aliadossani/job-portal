@@ -6,15 +6,13 @@ const HomePage = ({ jobList }) => {
     }
     return (
         <div>
-            <div className="jobsContainer">
-                {
-                    jobList.map((job) => {
-                        return (
-                            <JobCard job={job} key={job.jobId} />
-                        )
-                    })
-                }
-            </div>
+            {
+                jobList.map((job) => {
+                    return (
+                        <JobCard job={job} key={job.jobId} />
+                    )
+                })
+            }
         </div>
     );
 }

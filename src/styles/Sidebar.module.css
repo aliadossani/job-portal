@@ -1,15 +1,4 @@
-/* .main-container {
-  display: flex;
-}
-
-.sidebar {
-  width: 150px;
-  height: 1000px;
-  background-color: #b0e7c5;
-} */
-
 .sidebarContainer {
-  position: fixed;
   top: 0;
   right: 0;
   width: 250px;

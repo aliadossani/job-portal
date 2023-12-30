@@ -1,0 +1,7 @@
+.routesContainer {
+    flex: 1;
+}
+
+.mainCnt {
+    display: flex;
+}
