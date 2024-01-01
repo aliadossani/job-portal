@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 
 import AboutPage from "./Pages/AboutPage";
 import Error404Page from "./Pages/Error404Page";
@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import JobCard from "./components/JobCard";
 import FetchData from "./components/FetchData";
+import AddJobs from "./Pages/AddJobs";
 
 import classes from "./styles/App.module.css";
 
@@ -25,7 +26,7 @@ function App() {
     const getJobs = async () => {
       const response = await axios.get("http://localhost:8000/jobs");
       setJobs(response.data);
-    }
+    };
     getJobs();
   }, []);
 
@@ -38,10 +39,23 @@ function App() {
           <div className={classes.routesContainer}>
             <Routes>
               <Route path="/" element={<HomePage jobList={jobs} />} />
-              <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} setUserEmail={setUserEmail} />} />
-              <Route path="/job/jobDetails/:jobId" element={<JobDetailsPage jobList={jobs} />} />
+              <Route
+                path="/login"
+                element={
+                  <LoginPage
+                    setIsLoggedIn={setIsLoggedIn}
+                    isLoggedIn={isLoggedIn}
+                    setUserEmail={setUserEmail}
+                  />
+                }
+              />
+              <Route
+                path="/job/jobDetails/:id"
+                element={<JobDetailsPage jobList={jobs} />}
+              />
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<Error404Page />} />
+              <Route path="/AddJob" element={<AddJobs />} />
             </Routes>
           </div>
           <Sidebar />
