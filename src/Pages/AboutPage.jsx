@@ -5,7 +5,15 @@ function About() {
     <section className="section-white">
       <div className="container">
         <div className="row">
-          <div className="col-md-12 text-center"></div>
+          <div className="col-md-12 text-center">
+            <h2 className="aboutProject">About the project</h2>
+            <p className="portal">
+              A job portal is an online platform designed to connect job seekers
+              with potential employers. It serves as an intermediary that
+              facilitates the exchange of information between employers offering
+              job opportunities and individuals seeking employment.
+            </p>
+          </div>
 
           <div className="col-sm-6 col-md-4">
             <div className="team-item">
