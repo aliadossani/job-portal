@@ -1,9 +1,10 @@
-const Error404Page = () => {
-    return (
-        <div>
-            <h1>404 Page not found</h1>
-        </div>
-    );
-}
+const NotFound = () => {
+  return (
+    <>
+      <h1>404 - Page Not Found</h1>
+      <p>Sorry, the page you are looking for could not be found.</p>
+    </>
+  );
+};
 
-export default Error404Page;
+export default NotFound;
