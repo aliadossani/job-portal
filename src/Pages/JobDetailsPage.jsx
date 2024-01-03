@@ -19,8 +19,8 @@ const JobDetailsPage = ({ jobList }) => {
 
     return (
         <div>
-            <img src={currentJobDetails.image} />
-            <h3>{currentJobDetails.companyName}</h3>
+            <img src={jobDetails.image} />
+            <h3>{jobDetails.companyName}</h3>
 
         </div>
     );
