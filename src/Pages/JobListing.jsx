@@ -2,7 +2,7 @@ import JobCard from "../components/JobCard";
 import classes from "../styles/HomePage.module.css"
 import NoJobImage from "../assets/nojob.png";
 
-const HomePage = ({ jobList, deleteJobHandler, saveJobHandler }) => {
+const JobListing = ({ jobList, deleteJobHandler, saveJobHandler,  }) => {
     if (!jobList?.length) {
         return (
             <div className={classes.noJobCtn}>
@@ -24,4 +24,4 @@ const HomePage = ({ jobList, deleteJobHandler, saveJobHandler }) => {
     );
 }
 
-export default HomePage;
+export default JobListing;

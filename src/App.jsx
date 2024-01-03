@@ -4,7 +4,7 @@ import axios from "axios";
 
 import AboutPage from "./Pages/AboutPage";
 import Error404Page from "./Pages/Error404Page";
-import HomePage from "./Pages/HomePage";
+import JobListing from "./Pages/JobListing";
 import JobDetailsPage from "./Pages/JobDetailsPage";
 import LoginPage from "./Pages/LoginPage";
 
@@ -29,11 +29,10 @@ function App() {
   };
 
   const saveJobHandler = (currentId) => {
-    console.log({ currentId });
     setJobs(
       jobs.map((currentJob) => {
         if (currentJob.jobId === currentId) {
-          currentJob.isJobSaved = true;
+          currentJob.isJobSaved = !currentJob.isJobSaved;
         }
         return currentJob;
       })
@@ -42,6 +41,22 @@ function App() {
 
   const savedJobs = useMemo(() => {
     return jobs.filter((job) => job.isJobSaved);
+  }, [jobs]);
+
+
+  const applyJobHandler = (currentId) => {
+    setJobs(
+      jobs.map((currentJob) => {
+        if (currentJob.jobId === currentId) {
+          currentJob.isApplied = !currentJob.isApplied;
+        }
+        return currentJob;
+      })
+    )
+  };
+
+  const appliedJobs = useMemo(() => {
+    return jobs.filter((job) => job.isApplied);
   }, [jobs]);
 
   useEffect(() => {
@@ -60,7 +75,7 @@ function App() {
         !isLoading && <div className={classes.mainCnt}>
           <div className={classes.routesContainer}>
             <Routes>
-              <Route path="/" element={<HomePage jobList={jobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler}
+              <Route path="/" element={<JobListing jobList={jobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler}
               />} />
               <Route
                 path="/login"
@@ -73,13 +88,14 @@ function App() {
                 }
               />
               <Route
-                path="/job/jobDetails/:id"
-                element={<JobDetailsPage jobList={jobs} />}
+                path="/job/jobDetails/:jobId"
+                element={<JobDetailsPage jobList={jobs} saveJobHandler={saveJobHandler} applyJobHandler={applyJobHandler} />}
               />
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<Error404Page />} />
               <Route path="/AddJob" element={<AddJobs />} />
-              <Route path="/savedJobs" element={<HomePage jobList={savedJobs} deleteJobHandler={deleteJobHandler} />} />
+              <Route path="/savedJobs" element={<JobListing jobList={savedJobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} />} />
+              <Route path="/appliedJobs" element={<JobListing jobList={appliedJobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} />} />
             </Routes>
           </div>
           <Sidebar />

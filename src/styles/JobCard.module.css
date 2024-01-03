@@ -98,12 +98,13 @@
 }
 
 .saveCtn {
-    width: 65px;
+    width: 70px;
     height: 30px;
     border-radius: 4px;
     padding: 4px 12px;
     background-color: transparent;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .learnMoreCtn {
@@ -114,6 +115,7 @@
     background-color: #000;
     color: #fff;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .tagsContainer {

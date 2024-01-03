@@ -17,6 +17,11 @@ const Sidebar = () => {
           <Link to="/savedJobs" className={classes.Link}>
             Saved Jobs
           </Link>
+
+
+          <Link to="/appliedJobs" className={classes.Link}>
+            Applied Jobs
+          </Link>
         </li>
       </ul>
     </div>
