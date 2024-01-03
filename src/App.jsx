@@ -12,7 +12,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import JobCard from "./components/JobCard";
-import FetchData from "./components/FetchData";
 import AddJobs from "./Pages/AddJobs";
 
 import classes from "./styles/App.module.css";
@@ -21,6 +20,24 @@ function App() {
   const [jobs, setJobs] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
+
+  const deleteJobHandler = (currentId) => {
+    setJobs(
+      jobs.filter((currentJob) => currentJob.jobId !== currentId)
+    );
+  };
+
+  const saveJobHandler = (currentId) => {
+    console.log({ currentId });
+    setJobs(
+      jobs.map((currentJob) => {
+        if (currentJob.jobId === currentId) {
+          currentJob.isJobSaved = true;
+        }
+        return currentJob;
+      })
+    )
+  };
 
   useEffect(() => {
     const getJobs = async () => {
@@ -38,7 +55,8 @@ function App() {
         <div className={classes.mainCnt}>
           <div className={classes.routesContainer}>
             <Routes>
-              <Route path="/" element={<HomePage jobList={jobs} />} />
+              <Route path="/" element={<HomePage jobList={jobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler}
+              />} />
               <Route
                 path="/login"
                 element={
