@@ -27,6 +27,18 @@ function App() {
     );
   };
 
+  const saveJobHandler = (currentId) => {
+    console.log({ currentId });
+    setJobs(
+      jobs.map((currentJob) => {
+        if (currentJob.jobId === currentId) {
+          currentJob.isJobSaved = true;
+        }
+        return currentJob;
+      })
+    )
+  };
+
   useEffect(() => {
     const getJobs = async () => {
       const response = await axios.get("http://localhost:8000/jobs");
@@ -43,7 +55,7 @@ function App() {
         <div className={classes.mainCnt}>
           <div className={classes.routesContainer}>
             <Routes>
-              <Route path="/" element={<HomePage jobList={jobs} deleteJobHandler={deleteJobHandler}
+              <Route path="/" element={<HomePage jobList={jobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler}
               />} />
               <Route
                 path="/login"

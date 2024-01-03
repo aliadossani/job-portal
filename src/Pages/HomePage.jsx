@@ -1,6 +1,6 @@
 import JobCard from "../components/JobCard";
 
-const HomePage = ({ jobList, deleteJobHandler }) => {
+const HomePage = ({ jobList, deleteJobHandler, saveJobHandler }) => {
     if (!jobList?.length) {
         return null;
     }
@@ -9,7 +9,7 @@ const HomePage = ({ jobList, deleteJobHandler }) => {
             {
                 jobList.map((job) => {
                     return (
-                        <JobCard job={job} key={job.jobId} deleteJobHandler={deleteJobHandler} />
+                        <JobCard job={job} key={job.jobId} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} />
                     )
                 })
             }

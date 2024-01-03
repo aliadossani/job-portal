@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "../styles/JobCard.module.css";
 
-const JobCard = ({ job, deleteJobHandler }) => {
+const JobCard = ({ job, deleteJobHandler, saveJobHandler }) => {
     const { image, companyName, companyDescription, jobPosition, jobId, salary, jobLocation, companySize, tags, jobCreatedAt } = job;
     const { minimum, maximum, currencySymbol } = salary;
     const { country, city } = jobLocation;
@@ -52,7 +52,15 @@ const JobCard = ({ job, deleteJobHandler }) => {
                             <div className={classes.jobCreatedCtn}>
                                 <p>{jobCreatedAt}</p>
                             </div>
-                            <button className={classes.saveCtn} type="button">Save</button>
+                            <button
+                                className={classes.saveCtn}
+                                type="button"
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    saveJobHandler(job.jobId);
+                                }}
+                                disabled={job.isJobSaved}
+                            >{job.isJobSaved ? "Saved" : "Save"}</button>
                             <button className={classes.learnMoreCtn} type="button">Learn More</button>
 
                         </div>
