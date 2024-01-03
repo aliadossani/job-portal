@@ -5,7 +5,6 @@ const JobCard = ({ job, deleteJobHandler, saveJobHandler }) => {
     const { image, companyName, companyDescription, jobPosition, jobId, salary, jobLocation, companySize, tags, jobCreatedAt } = job;
     const { minimum, maximum, currencySymbol } = salary;
     const { country, city } = jobLocation;
-    console.warn({ job });
 
     return (
         <div className={classes.container}>
