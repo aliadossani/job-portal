@@ -1,8 +1,5 @@
 .sidebarContainer {
-  top: 0;
-  right: 0;
   width: 150px;
-  height: 100vh;
   background-color: rgb(179, 232, 209);
   padding-top: 120px;
 }
