@@ -18,6 +18,7 @@ import classes from "./styles/App.module.css";
 
 function App() {
   const [jobs, setJobs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
 
@@ -47,16 +48,16 @@ function App() {
     const getJobs = async () => {
       const response = await axios.get("http://localhost:8000/jobs");
       setJobs(response.data);
+      setIsLoading(false);
     };
     getJobs();
   }, []);
 
   return (
-    <>
-      <div>
-        <Navbar isLoggedIn={isLoggedIn} userEmail={userEmail} />
-
-        <div className={classes.mainCnt}>
+    <div className={classes.rootCnt}>
+      <Navbar isLoggedIn={isLoggedIn} userEmail={userEmail} />
+      {
+        !isLoading && <div className={classes.mainCnt}>
           <div className={classes.routesContainer}>
             <Routes>
               <Route path="/" element={<HomePage jobList={jobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler}
@@ -78,14 +79,15 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<Error404Page />} />
               <Route path="/AddJob" element={<AddJobs />} />
-              <Route path="/savedJobs" element={<HomePage jobList={savedJobs} />} />
+              <Route path="/savedJobs" element={<HomePage jobList={savedJobs} deleteJobHandler={deleteJobHandler} />} />
             </Routes>
           </div>
           <Sidebar />
         </div>
-        <Footer />
-      </div>
-    </>
+      }
+
+      <Footer />
+    </div>
   );
 }
 

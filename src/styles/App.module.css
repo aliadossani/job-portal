@@ -1,7 +1,15 @@
 .routesContainer {
+    display: flex;
     flex: 1;
 }
 
 .mainCnt {
     display: flex;
+    flex: 1;
+}
+
+.rootCnt {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }

@@ -1,0 +1,26 @@
+.noJobCtn {
+    text-align: center;
+    color: black;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.noJobCtn img {
+    width: 400px;
+    height: auto;
+}
+
+.noJobCtn h2 {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.jobListing {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
