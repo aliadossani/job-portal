@@ -58,8 +58,8 @@ const JobCard = ({ job, deleteJobHandler, saveJobHandler }) => {
                                     event.preventDefault();
                                     saveJobHandler(job.jobId);
                                 }}
-                                disabled={job.isJobSaved}
-                            >{job.isJobSaved ? "Saved" : "Save"}</button>
+                            // disabled={job.isJobSaved}
+                            >{job.isJobSaved ? "Unsave" : "Save"}</button>
                             <button className={classes.learnMoreCtn} type="button">Learn More</button>
 
                         </div>
