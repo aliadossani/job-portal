@@ -13,6 +13,10 @@ const Sidebar = () => {
           <Link to="/AddJob" className={classes.Link}>
             Add Job
           </Link>
+
+          <Link to="/savedJobs" className={classes.Link}>
+            Saved Jobs
+          </Link>
         </li>
       </ul>
     </div>

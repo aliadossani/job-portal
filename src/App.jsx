@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Routes, Route } from "react-router-dom";
 import axios from "axios";
 
@@ -39,6 +39,10 @@ function App() {
     )
   };
 
+  const savedJobs = useMemo(() => {
+    return jobs.filter((job) => job.isJobSaved);
+  }, [jobs]);
+
   useEffect(() => {
     const getJobs = async () => {
       const response = await axios.get("http://localhost:8000/jobs");
@@ -74,6 +78,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<Error404Page />} />
               <Route path="/AddJob" element={<AddJobs />} />
+              <Route path="/savedJobs" element={<HomePage jobList={savedJobs} />} />
             </Routes>
           </div>
           <Sidebar />
