@@ -17,7 +17,7 @@
 }
 .aboutProject {
   font-size: medium;
-  color: black;
+  color: #454545;
   text-align: center;
 }
 .portal {
@@ -108,4 +108,17 @@ ul.team-icon li a {
   border-radius: 5px;
   transition: background-color 0.3s;
   text-align: center;
+}
+.portal {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+
+  line-height: 18px;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  color: #acacac;
+  font-style: italic;
+  border-radius: 5px;
+  max-width: 900px;
 }

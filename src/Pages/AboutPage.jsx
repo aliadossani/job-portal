@@ -6,7 +6,7 @@ function About() {
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h2 className="aboutProject">About the project</h2>
+            <h2 className="aboutProject">About the app</h2>
             <p className="portal">
               A job portal is an online platform designed to connect job seekers
               with potential employers. It serves as an intermediary that
