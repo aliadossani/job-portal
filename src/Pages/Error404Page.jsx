@@ -1,10 +1,11 @@
-const NotFound = () => {
+import image from "../assets/error.avif";
+
+const Error404Page = () => {
   return (
-    <>
-      <h1>404 - Page Not Found</h1>
-      <p>Sorry, the page you are looking for could not be found.</p>
-    </>
+    <div className="cont-404">
+      <img src={image} alt="No page found" />
+    </div>
   );
 };
 
-export default NotFound;
+export default Error404Page;
