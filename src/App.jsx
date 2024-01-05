@@ -11,10 +11,10 @@ import LoginPage from "./Pages/LoginPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
-import JobCard from "./components/JobCard";
 import AddJobs from "./Pages/AddJobs";
 
 import classes from "./styles/App.module.css";
+import { BASE_URL } from "./constants";
 
 function App() {
   const [jobs, setJobs] = useState([]);
@@ -22,10 +22,15 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
 
-  const deleteJobHandler = (currentId) => {
-    setJobs(
-      jobs.filter((currentJob) => currentJob.jobId !== currentId)
-    );
+  const getJobs = async () => {
+    const response = await axios.get(BASE_URL);
+    setJobs(response.data);
+    setIsLoading(false);
+  };
+
+  const deleteJobHandler = async (currentId) => {
+    await axios.delete(`${BASE_URL}/${currentId}`)
+    getJobs();
   };
 
   const saveJobHandler = (currentId) => {
@@ -60,11 +65,6 @@ function App() {
   }, [jobs]);
 
   useEffect(() => {
-    const getJobs = async () => {
-      const response = await axios.get("http://localhost:8000/jobs");
-      setJobs(response.data);
-      setIsLoading(false);
-    };
     getJobs();
   }, []);
 
