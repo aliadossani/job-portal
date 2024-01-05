@@ -29,9 +29,9 @@ function App() {
   };
 
   const deleteJobHandler = async (currentId) => {
-    await axios.delete(`${BASE_URL}/${currentId}`)
+    await axios.delete(`${BASE_URL}/${currentId}`);
     getJobs();
-  };
+  }
 
   const saveJobHandler = (currentId) => {
     setJobs(
@@ -75,7 +75,7 @@ function App() {
         !isLoading && <div className={classes.mainCnt}>
           <div className={classes.routesContainer}>
             <Routes>
-              <Route path="/" element={<JobListing jobList={jobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler}
+              <Route path="/" element={<JobListing jobList={jobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} showDeleteButton={true}
               />} />
               <Route
                 path="/login"
@@ -94,8 +94,8 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<Error404Page />} />
               <Route path="/AddJob" element={<AddJobs />} />
-              <Route path="/savedJobs" element={<JobListing jobList={savedJobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} />} />
-              <Route path="/appliedJobs" element={<JobListing jobList={appliedJobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} />} />
+              <Route path="/savedJobs" element={<JobListing jobList={savedJobs} saveJobHandler={saveJobHandler} showDeleteButton={false} />} />
+              <Route path="/appliedJobs" element={<JobListing jobList={appliedJobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} showDeleteButton={false} />} />
             </Routes>
           </div>
           <Sidebar />
