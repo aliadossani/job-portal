@@ -9,12 +9,12 @@ const AddJobs = ({ getJobs }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target.companyName.value);
+
     //create mock
     const job = {
       "jobId": event.target.jobId.value,
       "id": event.target.jobId.value,
-      "image": event.target.companyName.value,
+      "image": event.target.image.value,
       "companyName": event.target.companyName.value,
       "companyDescription": event.target.companyName.value,
       "companyOverview": event.target.CompanyOverview.value,
