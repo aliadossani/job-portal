@@ -54,7 +54,7 @@ const Navbar = ({ isLoggedIn, userEmail }) => {
             <Link to="/login">LogIn</Link>
         }
       </div>
-    </div>
+
     </nav >
   );
 };
