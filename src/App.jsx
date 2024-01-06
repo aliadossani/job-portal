@@ -14,7 +14,7 @@ import Sidebar from "./components/Sidebar";
 import AddJobs from "./Pages/AddJobs";
 
 import classes from "./styles/App.module.css";
-import { BASE_URL } from "./constants";
+import { API_BASE_URL } from "./constants";
 
 function App() {
   const [jobs, setJobs] = useState([]);
@@ -23,13 +23,13 @@ function App() {
   const [userEmail, setUserEmail] = useState("");
 
   const getJobs = async () => {
-    const response = await axios.get(BASE_URL);
+    const response = await axios.get(API_BASE_URL);
     setJobs(response.data);
     setIsLoading(false);
   };
 
   const deleteJobHandler = async (currentId) => {
-    await axios.delete(`${BASE_URL}/${currentId}`);
+    await axios.delete(`${API_BASE_URL}/${currentId}`);
     getJobs();
   }
 
@@ -93,7 +93,7 @@ function App() {
               />
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<Error404Page />} />
-              <Route path="/AddJob" element={<AddJobs />} />
+              <Route path="/AddJob" element={<AddJobs getJobs={getJobs} />} />
               <Route path="/savedJobs" element={<JobListing jobList={savedJobs} saveJobHandler={saveJobHandler} showDeleteButton={false} />} />
               <Route path="/appliedJobs" element={<JobListing jobList={appliedJobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} showDeleteButton={false} />} />
             </Routes>
