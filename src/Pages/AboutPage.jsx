@@ -18,7 +18,7 @@ function About() {
           <div className="col-sm-6 col-md-4">
             <div className="team-item">
               <img
-                src="https://demo.epic-webdesign.com/tf-pacifico/v1/images/team1a.jpg"
+                src="src/assets/AliaDossani.jpeg"
                 className="team-img"
                 alt="pic"
               />
@@ -27,7 +27,7 @@ function About() {
                 <p>IronHack Web-Dev</p>
                 <a
                   className="github"
-                  href="#"
+                  href="https://github.com/aliadossani"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -35,7 +35,7 @@ function About() {
                 </a>
                 <a
                   className="linkedIn"
-                  href="#"
+                  href="https://www.linkedin.com/in/alia-dossani-9a2479185/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -67,7 +67,7 @@ function About() {
                 </a>
                 <a
                   className="linkedIn"
-                  href="#"
+                  href="https://www.linkedin.com/in/prabeshikakoirala/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
