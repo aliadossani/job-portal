@@ -6,21 +6,33 @@ const Sidebar = () => {
     <div className={classes.sidebarContainer}>
       <ul>
         <li>
-          <Link to="/" className={classes.Link}>
-            Home Page
+          <Link to="/" className={classes.link}>
+            <div className={classes.sidebarLinks}>
+              <i class="bi bi-house-door-fill fa-3x"></i>
+              Home
+            </div>
           </Link>
 
-          <Link to="/AddJob" className={classes.Link}>
-            Add Job
+          <Link to="/AddJob" className={classes.link}>
+            <div className={classes.sidebarLinks}>
+              <i class="bi bi-plus-circle-fill fa-3x"></i>
+              Add
+            </div>
           </Link>
 
-          <Link to="/savedJobs" className={classes.Link}>
-            Saved Jobs
+          <Link to="/savedJobs" className={classes.link}>
+            <div className={classes.sidebarLinks}>
+              <i class="bi bi-floppy-fill fa-3x"></i>
+              Saved
+            </div>
           </Link>
 
 
-          <Link to="/appliedJobs" className={classes.Link}>
-            Applied Jobs
+          <Link to="/appliedJobs" className={classes.link}>
+            <div className={classes.sidebarLinks}>
+              <i class="bi bi-bag-check-fill"></i>
+              Applied
+            </div>
           </Link>
         </li>
       </ul>

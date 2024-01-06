@@ -2,6 +2,7 @@
   width: 150px;
   background-color: #FFFFFF;
   padding-top: 120px;
+  border: 2px solid #EDEDED;
 }
 
 ul {
@@ -19,7 +20,7 @@ li {
   border: 1px solid #0056b3;
 }
 
-.Link {
+.link {
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -31,7 +32,22 @@ li {
   text-align: center;
 }
 
+.link i {
+  width: 40px;
+}
+
 .Link:hover {
   border: 1px solid black;
+  text-decoration: none;
+}
+
+.sidebarLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.sidebarLinks:hover {
   text-decoration: none;
 }
