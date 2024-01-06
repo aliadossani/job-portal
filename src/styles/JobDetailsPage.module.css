@@ -22,12 +22,48 @@
 .headerDetailsCtn {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .socialLinksCtn {
     display: flex;
     flex-direction: column;
 }
+
+.linkContainer {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #143fcd;
+    margin-bottom: 4px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-color: #fff;
+    font-size: 14px;
+    padding: 0px;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.otherLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-width: 0;
+    min-height: 0;
+    flex-wrap: wrap;
+}
+
+
+.link {
+    color: grey;
+    width: 16px;
+    padding: 0px 10px;
+}
+
 
 .otherDetailsCtn {
     padding: 10px;
@@ -91,6 +127,10 @@
     margin-right: 5px;
 }
 
+.jobPositionCtn h4 {
+    font-weight: 600;
+}
+
 .jobPositionCtn button {
     width: 70px;
     height: 30px;
@@ -101,4 +141,11 @@
     background-color: transparent;
     font-weight: bold;
     cursor: pointer;
+}
+
+.jobCtn {
+    border: 2px solid #EDEDED;
+    padding-left: 10px;
+    box-shadow: 0 0 10px 2px rgba(10, 15, 15, .1);
+
 }

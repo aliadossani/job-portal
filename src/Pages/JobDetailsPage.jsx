@@ -26,8 +26,6 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
         <div className={classes.jobDetailsCtn}>
             <img src={jobDetails.image} />
             <div className={classes.jobDetailsSubCtn}>
-
-
                 <div className={classes.headerDetailsCtn}>
                     <div className={classes.JobheaderCtn}>
                         <h2>{companyName}</h2>
@@ -60,29 +58,38 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
                     <div className={classes.socialLinksCtn}>
                         <h3>About {companyName}</h3>
                         <h4>Website</h4>
-                        <a>{website}</a>
-                        <a>{twitter}</a>
-                        <a>{linkedIn}</a>
-                    </div>
+                        <div className={classes.linkContainer}>
+                            <a>{website}</a>
+                            <div className={classes.otherLinks}>
+                                <a className={classes.link} href={twitter} target="_blank" rel="noreferrer">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                                <a className={classes.link} href={linkedIn} target="_blank" rel="noreferrer">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
 
-                    <div className={classes.locationCtn}>
-                        <h4>Locations</h4>
-                        <p>{country}</p>
-                        <p>{city}</p>
-                    </div>
+                        <div className={classes.locationCtn}>
+                            <h4>Locations</h4>
+                            <p>{country}</p>
+                            <p>{city}</p>
+                        </div>
 
-                    <div className={classes.companySizeCtn}>
-                        <h4>Company Size</h4>
-                        <p>{companySize}</p>
-                    </div>
+                        <div className={classes.companySizeCtn}>
+                            <h4>Company Size</h4>
+                            <p>{companySize}</p>
+                        </div>
 
-                    <div className={classes.companyFundingCtn}>
-                        <h4>Total raised</h4>
-                        <p>{`${currencySymbol}${amount}`}</p>
+                        <div className={classes.companyFundingCtn}>
+                            <h4>Total raised</h4>
+                            <p>{`${currencySymbol}${amount}`}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+
+            </div>
 
         </div>
     );

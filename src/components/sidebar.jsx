@@ -6,9 +6,9 @@ const Sidebar = () => {
     <div className={classes.sidebarContainer}>
       <ul>
         <li>
-          <NavLink to="/" className={classes.NavLink}>
+          <Link to="/" className={classes.Link}>
             Home Page
-          </NavLink>
+          </Link>
 
           <Link to="/AddJob" className={classes.Link}>
             Add Job

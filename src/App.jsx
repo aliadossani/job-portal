@@ -74,6 +74,7 @@ function App() {
       {
         !isLoading && <div className={classes.mainCnt}>
           <div className={classes.routesContainer}>
+            <Sidebar />
             <Routes>
               <Route path="/" element={<JobListing jobList={jobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} showDeleteButton={true}
               />} />
@@ -87,6 +88,7 @@ function App() {
                   />
                 }
               />
+
               <Route
                 path="/job/jobDetails/:jobId"
                 element={<JobDetailsPage jobList={jobs} saveJobHandler={saveJobHandler} applyJobHandler={applyJobHandler} />}
@@ -98,7 +100,7 @@ function App() {
               <Route path="/appliedJobs" element={<JobListing jobList={appliedJobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} showDeleteButton={false} />} />
             </Routes>
           </div>
-          <Sidebar />
+
         </div>
       }
 

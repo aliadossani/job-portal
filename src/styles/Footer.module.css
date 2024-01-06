@@ -3,9 +3,10 @@
     position: fixed;
     height: 80px;
     bottom: 0;
-    background-color: #fef7e5;
+    /* background-color: #fef7e5; */
     display: flex;
     flex-direction: row;
+    background-color: #FFFFFF;
 
 }
 
