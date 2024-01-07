@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import classes from "../styles/JobCard.module.css";
 
-const JobCard = ({ job, deleteJobHandler, saveJobHandler, showDeleteButton }) => {
+const JobCard = ({ job, deleteJobHandler, saveJobHandler, showDeleteButton, isLoggedIn }) => {
 
     const navigate = useNavigate();
 
@@ -54,17 +54,20 @@ const JobCard = ({ job, deleteJobHandler, saveJobHandler, showDeleteButton }) =>
                             <div className={classes.jobCreatedCtn}>
                                 <p>{jobCreatedAt}</p>
                             </div>
-                            <button
-                                className={classes.saveCtn}
-                                onClick={(event) => {
-                                    event.preventDefault();
-                                    // route to Edit Job Page
-                                    navigate(`/UpdateJob/${jobId}`, { state: { editJobDetails: job, editJob: true } });
-                                }}
-                                type="button"
-                            >
-                                Edit
-                            </button>
+                            {
+                                isLoggedIn &&
+                                <button
+                                    className={classes.saveCtn}
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        // route to Edit Job Page
+                                        navigate(`/UpdateJob/${jobId}`, { state: { editJobDetails: job, editJob: true } });
+                                    }}
+                                    type="button"
+                                >
+                                    Edit
+                                </button>
+                            }
                             <button
                                 className={classes.saveCtn}
                                 type="button"
@@ -81,7 +84,7 @@ const JobCard = ({ job, deleteJobHandler, saveJobHandler, showDeleteButton }) =>
 
 
                     {
-                        showDeleteButton && <div className={classes.deleteBtnContainer}>
+                        isLoggedIn && showDeleteButton && <div className={classes.deleteBtnContainer}>
                             <i
                                 onClick={(event) => {
                                     event.preventDefault();
