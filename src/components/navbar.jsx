@@ -19,7 +19,7 @@ const Navbar = ({ isLoggedIn, userEmail }) => {
             ?
             <p>{userEmail}</p>
             :
-            <Link to="/login">LogIn</Link>
+            <Link to="/login">Admin Login</Link>
         }
       </div>
 

@@ -2,7 +2,7 @@ import JobCard from "../components/JobCard";
 import classes from "../styles/JobListing.module.css"
 import NoJobImage from "../assets/nojob.png";
 
-const JobListing = ({ jobList, deleteJobHandler, saveJobHandler, showDeleteButton }) => {
+const JobListing = ({ jobList, deleteJobHandler, saveJobHandler, showDeleteButton, isLoggedIn }) => {
     if (!jobList?.length) {
         return (
             <div className={classes.noJobCtn}>
@@ -16,7 +16,7 @@ const JobListing = ({ jobList, deleteJobHandler, saveJobHandler, showDeleteButto
             {
                 jobList.map((job) => {
                     return (
-                        <JobCard job={job} key={job.jobId} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} showDeleteButton={showDeleteButton} />
+                        <JobCard job={job} key={job.jobId} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} showDeleteButton={showDeleteButton} isLoggedIn={isLoggedIn} />
                     )
                 })
             }

@@ -55,7 +55,7 @@ const AddJobs = ({ getJobs }) => {
         "maximum": event.target.maximumSalary.value,
         "currencySymbol": event.target.currencySymbol.value,
       },
-      "jobCreatedAt": "POSTED TODAY",
+      "jobCreatedAt": new Date().toLocaleDateString(),
       "isJobSaved": false,
       "isApplied": false
     }
@@ -87,29 +87,29 @@ const AddJobs = ({ getJobs }) => {
         <input
           type="text"
           name="jobId"
-          defaultValue={editJobDetails.jobId}
-          disabled={!!editJobDetails.jobId}
+          defaultValue={editJobDetails?.jobId}
+          disabled={!!editJobDetails?.jobId}
         />
       </label><br />
 
       <hr />
       <label>image:
         <input type="text" name="image"
-          defaultValue={editJobDetails.image} />
+          defaultValue={editJobDetails?.image} />
       </label>
 
       <hr />
 
       <label>CompanyName:
         <input type="text" name="companyName"
-          defaultValue={editJobDetails.companyName} />
+          defaultValue={editJobDetails?.companyName} />
       </label>
 
       <hr />
 
       <label>CompanyDescription:
         <input type="text" name="companyDescription"
-          defaultValue={editJobDetails.companyDescription} />
+          defaultValue={editJobDetails?.companyDescription} />
       </label>
 
 
@@ -117,47 +117,47 @@ const AddJobs = ({ getJobs }) => {
 
       <label>CompanyOverview:
         <input type="text" name="CompanyOverview"
-          defaultValue={editJobDetails.CompanyOverview} />
+          defaultValue={editJobDetails?.companyOverview} />
       </label>
 
       <hr />
       <label>website:
         <input type="text" name="website"
-          defaultValue={editJobDetails.website} />
+          defaultValue={editJobDetails?.socialLinks?.website} />
       </label>
 
       <label>twitter:
         <input type="text" name="twitter"
-          defaultValue={editJobDetails.twitter} />
+          defaultValue={editJobDetails?.socialLinks?.twitter} />
       </label>
 
       <label>linkedIn:
         <input type="text" name="linkedIn"
-          defaultValue={editJobDetails.linkedIn} />
+          defaultValue={editJobDetails?.socialLinks?.linkedIn} />
       </label>
       <hr />
 
       <label>Funding Amount:
         <input type="text" name="amount"
-          defaultValue={editJobDetails.amount} />
+          defaultValue={editJobDetails?.companyTotalFunding?.amount} />
       </label>
       <hr />
 
       <label>Country:
         <input type="text" name="country"
-          defaultValue={editJobDetails.country} />
+          defaultValue={editJobDetails?.jobLocation?.country} />
       </label>
 
       <label>City:
         <input type="text" name="city"
-          defaultValue={editJobDetails.city} />
+          defaultValue={editJobDetails?.jobLocation?.city} />
       </label>
 
       <hr />
 
       <label>CompanySize:
         <input type="text" name="companySize"
-          defaultValue={editJobDetails.companySize} />
+          defaultValue={editJobDetails?.companySize} />
       </label>
 
       <hr />
@@ -165,23 +165,23 @@ const AddJobs = ({ getJobs }) => {
         <h4>Tags</h4>
         <label>Name:
           <input type="text" name="tagName"
-            defaultValue={editJobDetails.tagName} />
+            defaultValue={editJobDetails?.tags && editJobDetails?.tags[0]?.name} />
         </label>
 
         <label>TextColor:
           <input type="text" name="tagTextColor"
-            defaultValue={editJobDetails.tagTextColor} />
+            defaultValue={editJobDetails?.tags && editJobDetails?.tags[0]?.textColor} />
         </label>
 
         <label>BackgroundColor:
           <input type="text" name="tagBackgroundColor"
-            defaultValue={editJobDetails.tagBackgroundColor} />
+            defaultValue={editJobDetails?.tags && editJobDetails?.tags[0]?.backgroundColor} />
         </label>
       </section>
       <hr />
       <label>jobPosition:
         <select name="jobPosition"
-          selected={editJobDetails.jobPosition} >
+          selected={editJobDetails?.jobPosition} >
           <option value="Web Developer">Web Developer</option>
           <option value="UI/UX Designer">UI/UX Designer</option>
           <option value="Manual Quality Assurance Engineer">Manual Quality Assurance Engineer</option>
@@ -196,17 +196,17 @@ const AddJobs = ({ getJobs }) => {
 
       <label>MinimumSalary:
         <input type="text" name="minimumSalary"
-          defaultValue={editJobDetails.minimumSalary} />
+          defaultValue={editJobDetails?.salary?.minimum} />
       </label>
 
       <label>MaximumSalary:
         <input type="text" name="maximumSalary"
-          defaultValue={editJobDetails.maximumSalary} />
+          defaultValue={editJobDetails?.salary?.maximum} />
       </label>
 
       <label>currencySymbol:
         <select name="currencySymbol"
-          selected={editJobDetails.currencySymbol}>
+          selected={editJobDetails?.currencySymbol}>
           <option value="$">$</option>
           <option value="€">€</option>
           <option value="₹">₹</option>

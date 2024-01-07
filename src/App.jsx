@@ -74,9 +74,9 @@ function App() {
       {
         !isLoading && <div className={classes.mainCnt}>
           <div className={classes.routesContainer}>
-            <Sidebar />
+            <Sidebar isLoggedIn={isLoggedIn} />
             <Routes>
-              <Route path="/" element={<JobListing jobList={jobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} showDeleteButton={true}
+              <Route path="/" element={<JobListing jobList={jobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} showDeleteButton={true} isLoggedIn={isLoggedIn}
               />} />
               <Route
                 path="/login"

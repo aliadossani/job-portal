@@ -15,7 +15,7 @@ const LoginPage = ({ setIsLoggedIn, setUserEmail, isLoggedIn }) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (username === "alia@gmail.com" && password === "1234") {
+        if (username === "admin@admin.com" && password === "admin") {
             setIsLoggedIn(true);
             setUserEmail(username);
             navigate("/");
