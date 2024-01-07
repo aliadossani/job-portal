@@ -27,6 +27,10 @@
     color: #050c26;
 }
 
+.jobCardContainer:hover {
+    text-decoration: none;
+}
+
 .companyImageContainer {
     margin-right: 10px;
 }

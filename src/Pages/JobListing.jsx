@@ -1,5 +1,5 @@
 import JobCard from "../components/JobCard";
-import classes from "../styles/HomePage.module.css"
+import classes from "../styles/JobListing.module.css"
 import NoJobImage from "../assets/nojob.png";
 
 const JobListing = ({ jobList, deleteJobHandler, saveJobHandler, showDeleteButton }) => {

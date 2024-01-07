@@ -1,11 +1,15 @@
 import axios from "axios";
-import { useState } from "react";
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import { API_BASE_URL } from "../constants";
 
 const AddJobs = ({ getJobs }) => {
   const navigate = useNavigate();
+
+  const { state } = useLocation();
+
+  const editJobDetails = state ? state.editJobDetails : {};
+
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -56,31 +60,48 @@ const AddJobs = ({ getJobs }) => {
       "isApplied": false
     }
 
-    //post
-    axios.post(`${API_BASE_URL}`, job)
-      .then(() => {
-        getJobs();
-        navigate(`/`);
-      }).catch((err) => {
-        console.error(err);
-      })
+    if (state?.editJob) {
+      //put edit job
+      axios.put(`${API_BASE_URL}/${editJobDetails.jobId}`, job)
+        .then(() => {
+          getJobs();
+          navigate(`/`);
+        }).catch((err) => {
+          console.error(err);
+        })
+    } else {
+      //post add job
+      axios.post(`${API_BASE_URL}`, job)
+        .then(() => {
+          getJobs();
+          navigate(`/`);
+        }).catch((err) => {
+          console.error(err);
+        })
+    }
   }
 
   return (
     <form onSubmit={onSubmit}>
       <label>jobId:
-        <input type="text" name="jobId" />
+        <input
+          type="text"
+          name="jobId"
+          defaultValue={editJobDetails.jobId}
+          disabled={!!editJobDetails.jobId}
+        />
       </label><br />
 
       <hr />
       <label>image:
-        <input type="text" name="image" />
+        <input type="text" name="image"
+          defaultValue={editJobDetails.image} />
       </label>
 
       <hr />
 
       <label>CompanyName:
-        <input type="text" name="companyName" />
+        <input type="text" name="companyName" defaultValue={editJobDetails.companyName} />
       </label>
 
       <hr />

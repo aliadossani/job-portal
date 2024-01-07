@@ -4,7 +4,7 @@ import classes from "../styles/JobDetailsPage.module.css";
 
 const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
 
-    let { jobId } = useParams();
+    const { jobId } = useParams();
 
     const [jobDetails, setJobDetails] = useState(null);
 
