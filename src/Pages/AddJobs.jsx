@@ -101,73 +101,87 @@ const AddJobs = ({ getJobs }) => {
       <hr />
 
       <label>CompanyName:
-        <input type="text" name="companyName" defaultValue={editJobDetails.companyName} />
+        <input type="text" name="companyName"
+          defaultValue={editJobDetails.companyName} />
       </label>
 
       <hr />
 
       <label>CompanyDescription:
-        <input type="text" name="companyDescription" />
+        <input type="text" name="companyDescription"
+          defaultValue={editJobDetails.companyDescription} />
       </label>
 
 
       <hr />
 
       <label>CompanyOverview:
-        <input type="text" name="CompanyOverview" />
+        <input type="text" name="CompanyOverview"
+          defaultValue={editJobDetails.CompanyOverview} />
       </label>
 
       <hr />
       <label>website:
-        <input type="text" name="website" />
+        <input type="text" name="website"
+          defaultValue={editJobDetails.website} />
       </label>
 
       <label>twitter:
-        <input type="text" name="twitter" />
+        <input type="text" name="twitter"
+          defaultValue={editJobDetails.twitter} />
       </label>
 
       <label>linkedIn:
-        <input type="text" name="linkedIn" />
+        <input type="text" name="linkedIn"
+          defaultValue={editJobDetails.linkedIn} />
       </label>
       <hr />
 
       <label>Funding Amount:
-        <input type="text" name="amount" />
+        <input type="text" name="amount"
+          defaultValue={editJobDetails.amount} />
       </label>
       <hr />
 
       <label>Country:
-        <input type="text" name="country" />
+        <input type="text" name="country"
+          defaultValue={editJobDetails.country} />
       </label>
 
       <label>City:
-        <input type="text" name="city" />
+        <input type="text" name="city"
+          defaultValue={editJobDetails.city} />
       </label>
 
       <hr />
 
       <label>CompanySize:
-        <input type="text" name="companySize" />
+        <input type="text" name="companySize"
+          defaultValue={editJobDetails.companySize} />
       </label>
 
       <hr />
       <section>
         <h4>Tags</h4>
         <label>Name:
-          <input type="text" name="tagName" />
+          <input type="text" name="tagName"
+            defaultValue={editJobDetails.tagName} />
         </label>
 
         <label>TextColor:
-          <input type="text" name="tagTextColor" />
+          <input type="text" name="tagTextColor"
+            defaultValue={editJobDetails.tagTextColor} />
         </label>
 
         <label>BackgroundColor:
-          <input type="text" name="tagBackgroundColor" />
+          <input type="text" name="tagBackgroundColor"
+            defaultValue={editJobDetails.tagBackgroundColor} />
         </label>
       </section>
       <hr />
       <label>jobPosition:
-        <select name="jobPosition" >
+        <select name="jobPosition"
+          selected={editJobDetails.jobPosition} >
           <option value="Web Developer">Web Developer</option>
           <option value="UI/UX Designer">UI/UX Designer</option>
           <option value="Manual Quality Assurance Engineer">Manual Quality Assurance Engineer</option>
@@ -181,15 +195,18 @@ const AddJobs = ({ getJobs }) => {
       <hr />
 
       <label>MinimumSalary:
-        <input type="text" name="minimumSalary" />
+        <input type="text" name="minimumSalary"
+          defaultValue={editJobDetails.minimumSalary} />
       </label>
 
       <label>MaximumSalary:
-        <input type="text" name="maximumSalary" />
+        <input type="text" name="maximumSalary"
+          defaultValue={editJobDetails.maximumSalary} />
       </label>
 
       <label>currencySymbol:
-        <select name="currencySymbol" >
+        <select name="currencySymbol"
+          selected={editJobDetails.currencySymbol}>
           <option value="$">$</option>
           <option value="€">€</option>
           <option value="₹">₹</option>
