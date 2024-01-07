@@ -96,6 +96,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<Error404Page />} />
               <Route path="/AddJob" element={<AddJobs getJobs={getJobs} />} />
+              <Route path="/UpdateJob/:jobId" element={<AddJobs getJobs={getJobs} />} />
               <Route path="/savedJobs" element={<JobListing jobList={savedJobs} saveJobHandler={saveJobHandler} showDeleteButton={false} />} />
               <Route path="/appliedJobs" element={<JobListing jobList={appliedJobs} deleteJobHandler={deleteJobHandler} saveJobHandler={saveJobHandler} showDeleteButton={false} />} />
             </Routes>

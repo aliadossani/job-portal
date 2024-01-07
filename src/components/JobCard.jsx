@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import classes from "../styles/JobCard.module.css";
 
 const JobCard = ({ job, deleteJobHandler, saveJobHandler, showDeleteButton }) => {
+
+    const navigate = useNavigate();
+
     const { image, companyName, companyDescription, jobPosition, jobId, salary, jobLocation, companySize, tags, jobCreatedAt } = job;
     const { minimum, maximum, currencySymbol } = salary;
     const { country, city } = jobLocation;
@@ -51,6 +54,17 @@ const JobCard = ({ job, deleteJobHandler, saveJobHandler, showDeleteButton }) =>
                             <div className={classes.jobCreatedCtn}>
                                 <p>{jobCreatedAt}</p>
                             </div>
+                            <button
+                                className={classes.saveCtn}
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    // route to Edit Job Page
+                                    navigate(`/UpdateJob/${jobId}`, { state: { editJobDetails: job, editJob: true } });
+                                }}
+                                type="button"
+                            >
+                                Edit
+                            </button>
                             <button
                                 className={classes.saveCtn}
                                 type="button"
