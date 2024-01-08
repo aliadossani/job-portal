@@ -32,9 +32,9 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
                             <img src={jobDetails.image} />
                         </div>
 
-                        <div className={classes.JobheaderCtn}>
+                        <div className={classes.jobheaderCtn}>
                             <h2>{companyName}</h2>
-                            <h3>{companyDescription}</h3>
+                            <p>{companyDescription}</p>
                         </div>
                     </div>
                     <div className={classes.subHeaderCtn}>
