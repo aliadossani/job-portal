@@ -1,0 +1,50 @@
+.form-box {
+  width: 50%;
+
+  margin: auto;
+  padding: 10px;
+  position: relative;
+  background-color: rgb(242, 248, 255);
+  border-radius: 5px;
+
+  margin-bottom: 100px;
+}
+.form-box input {
+  width: 100%;
+  padding: 0.5rem 0.2rem 0.5rem 0.3rem;
+  margin: 0.9vw 0;
+  border: 0;
+  border-radius: 5px;
+
+  font-size: 20px;
+}
+label {
+  font-weight: 400;
+  display: block;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+  font-size: 16px;
+}
+label:hover {
+  color: #f99898;
+}
+
+select {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #2a80b9;
+}
