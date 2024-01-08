@@ -9,7 +9,6 @@
 }
 
 .jobCardContainer {
-
     border: solid #e0e0e0;
     border-width: 1px 1px 3px;
     background-color: #f9f9f9;
@@ -31,7 +30,6 @@
     text-decoration: none;
 }
 
-
 .companyImageContainer {
     margin-right: 10px;
 }
@@ -47,7 +45,6 @@
     height: auto;
     object-fit: contain;
 }
-
 
 .jobDetails {
     display: flex;
@@ -86,7 +83,6 @@
     padding: 8px 16px 8px 0;
     display: flex;
     flex-direction: row;
-    /* align-items: flex-start; */
     align-items: center;
     justify-content: flex-end;
     min-width: 0;

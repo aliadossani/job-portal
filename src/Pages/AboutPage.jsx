@@ -8,10 +8,7 @@ function About() {
           <div className="col-md-12 text-center">
             <h2 className="aboutProject">About the app</h2>
             <p className="portal">
-              A job portal is an online platform designed to connect job seekers
-              with potential employers. It serves as an intermediary that
-              facilitates the exchange of information between employers offering
-              job opportunities and individuals seeking employment.
+              The Job Genie is an online platform designed to connect job seekers with employers, facilitating the job search and recruitment process. The employers can post job listings and manage the hiring process. The portal serves as a centralized hub for job-related activities, providing a convenient and efficient way for both job seekers and employers to find the right match for their needs.
             </p>
           </div>
 

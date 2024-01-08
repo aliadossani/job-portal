@@ -1,23 +1,22 @@
 .form-box {
   width: 50%;
-
   margin: auto;
   padding: 10px;
   position: relative;
   background-color: rgb(242, 248, 255);
   border-radius: 5px;
-
   margin-bottom: 100px;
 }
+
 .form-box input {
   width: 100%;
   padding: 0.5rem 0.2rem 0.5rem 0.3rem;
   margin: 0.9vw 0;
   border: 0;
   border-radius: 5px;
-
   font-size: 20px;
 }
+
 label {
   font-weight: 400;
   display: block;
@@ -25,6 +24,7 @@ label {
   transition: color 0.3s ease;
   font-size: 16px;
 }
+
 label:hover {
   color: #f99898;
 }
@@ -45,6 +45,7 @@ select {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .submitButton:hover {
   background-color: #2a80b9;
 }

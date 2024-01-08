@@ -1,6 +1,11 @@
 .section-white {
-  background: #fff;
   padding: 70px 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 .team-item {
@@ -15,11 +20,13 @@
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
 .aboutProject {
   font-size: medium;
   color: #454545;
   text-align: center;
 }
+
 .portal {
   color: black;
   text-align: center;
@@ -85,6 +92,7 @@ ul.team-icon li a {
   border-radius: 50%;
   color: #fff;
 }
+
 .github {
   text-decoration: none;
   color: #eab9c3;
@@ -97,6 +105,7 @@ ul.team-icon li a {
   transition: background-color 0.3s;
   text-align: center;
 }
+
 .linkedIn {
   text-decoration: none;
   color: #eab9c3;
@@ -109,6 +118,7 @@ ul.team-icon li a {
   transition: background-color 0.3s;
   text-align: center;
 }
+
 .portal {
   font-family: "Roboto", sans-serif;
   text-align: center;

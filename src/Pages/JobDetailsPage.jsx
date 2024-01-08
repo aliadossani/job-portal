@@ -31,12 +31,12 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
                         <div className={classes.imageCtn}>
                             <img src={jobDetails.image} />
                         </div>
-
                         <div className={classes.jobheaderCtn}>
                             <h2>{companyName}</h2>
                             <p>{companyDescription}</p>
                         </div>
                     </div>
+
                     <div className={classes.subHeaderCtn}>
                         <div className={classes.jobDetailsSubCtn}>
                             <p>{companyOverview}</p>
@@ -51,13 +51,11 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
                                         event.preventDefault();
                                         saveJobHandler(jobDetails.jobId);
                                     }}
-
                                     >{jobDetails.isJobSaved ? "Unsave" : "Save"}</button>
                                     <button type="button" onClick={(event) => {
                                         event.preventDefault();
                                         applyJobHandler(jobDetails.jobId);
                                     }}
-
                                     >{jobDetails.isApplied ? "Applied" : "Apply"}</button>
                                 </div>
                             </div>
@@ -99,12 +97,7 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
     );
 }
-
 export default JobDetailsPage;

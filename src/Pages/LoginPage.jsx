@@ -24,10 +24,8 @@ const LoginPage = ({ setIsLoggedIn, setUserEmail, isLoggedIn }) => {
         } else {
             alert("Please enter a valid email and Password");
         }
-
     }
     return (
-
         <div className={classes.mainWrapper}>
             <div className={classes.header}>
                 <h1 className={classes.headLine}>
@@ -53,7 +51,6 @@ const LoginPage = ({ setIsLoggedIn, setUserEmail, isLoggedIn }) => {
                 </div>
             </form>
         </div>
-
     );
 }
 

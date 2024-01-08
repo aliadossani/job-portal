@@ -17,7 +17,6 @@
     flex: 1;
 }
 
-
 .headLine {
     font-weight: 700;
 }
@@ -31,7 +30,6 @@
     display: flex;
     flex: 1
 }
-
 
 .submitBtnCtn input {
     background-color: black;

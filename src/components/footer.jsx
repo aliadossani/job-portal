@@ -8,9 +8,9 @@ const Footer = () => {
                 <div className={classes.aboutUsLink}>
                     <Link to="/about"> About us</Link>
                 </div>
-                <div>
+                {/* <div>
                     <Link to="">Terms and Conditions</Link>
-                </div>
+                </div> */}
                 <div className={classes.githubLink}>
                     <Link to="https://github.com/aliadossani/job-portal">Connect with Us</Link>
                 </div>
