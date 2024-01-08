@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import classes from "../styles/LoginPage.module.css";
 
 const LoginPage = ({ setIsLoggedIn, setUserEmail, isLoggedIn }) => {
     const [username, setUsername] = useState("");
@@ -26,7 +27,7 @@ const LoginPage = ({ setIsLoggedIn, setUserEmail, isLoggedIn }) => {
 
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={classes.loginCtn}>
 
             <label>Email:
                 <input type="email" name="email" value={username} onChange={(event) => setUsername(event.target.value)} required />
