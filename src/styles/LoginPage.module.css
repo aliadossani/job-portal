@@ -1,4 +1,68 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    margin: 0 auto;
+    font-family: Graphik, sans-serif;
+    color: #0e1111;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 0;
+    padding-top: 48px;
+}
+
 .loginCtn {
-    padding: 10px;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+.headLine {
+    font-weight: 700;
+}
+
+.submitBtnCtn {
+    height: 45px;
+    display: flex;
+}
+
+.submitBtnCtn label {
+    display: flex;
+    flex: 1
+}
+
+
+.submitBtnCtn input {
+    background-color: black;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0px 21px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    color: white;
+    flex: 1;
+    font-weight: bold;
+}
+
+.emailPassCtn {
+    height: 45px;
+    display: flex;
+}
+
+.emailPassCtn label {
+    display: flex;
+    flex: 1
+}
+
+.emailPassCtn input {
+    flex: 1;
+    border-color: #777;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    overflow: visible;
+    border-radius: 3px;
 }

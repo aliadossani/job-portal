@@ -54,20 +54,7 @@ const JobCard = ({ job, deleteJobHandler, saveJobHandler, showDeleteButton, isLo
                             <div className={classes.jobCreatedCtn}>
                                 <p>{jobCreatedAt}</p>
                             </div>
-                            {
-                                isLoggedIn &&
-                                <button
-                                    className={classes.saveCtn}
-                                    onClick={(event) => {
-                                        event.preventDefault();
-                                        // route to Edit Job Page
-                                        navigate(`/UpdateJob/${jobId}`, { state: { editJobDetails: job, editJob: true } });
-                                    }}
-                                    type="button"
-                                >
-                                    Edit
-                                </button>
-                            }
+
                             <button
                                 className={classes.saveCtn}
                                 type="button"
@@ -82,7 +69,19 @@ const JobCard = ({ job, deleteJobHandler, saveJobHandler, showDeleteButton, isLo
                         </div>
                     </div>
 
+                    {
+                        isLoggedIn &&
+                        <i
+                            className={`bi bi-pencil-fill ${classes.editIcon}`}
+                            onClick={(event) => {
+                                event.preventDefault();
+                                // route to Edit Job Page
+                                navigate(`/UpdateJob/${jobId}`, { state: { editJobDetails: job, editJob: true } });
+                            }}
+                        >
 
+                        </i>
+                    }
                     {
                         isLoggedIn && showDeleteButton && <div className={classes.deleteBtnContainer}>
                             <i

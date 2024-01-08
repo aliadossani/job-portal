@@ -70,7 +70,7 @@ function App() {
 
   return (
     <div className={classes.rootCnt}>
-      <Navbar isLoggedIn={isLoggedIn} userEmail={userEmail} />
+      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} userEmail={userEmail} />
       {
         !isLoading && <div className={classes.mainCnt}>
           <div className={classes.routesContainer}>

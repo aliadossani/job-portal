@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import classes from "../styles/Sidebar.module.css";
 
 const Sidebar = ({ isLoggedIn }) => {
@@ -8,7 +8,7 @@ const Sidebar = ({ isLoggedIn }) => {
         <li>
           <Link to="/" className={classes.link}>
             <div className={classes.sidebarLinks}>
-              <i className="bi bi-house-door-fill fa-3x"></i>
+              <i className="bi bi-house-door-fill fs3"></i>
               Home
             </div>
           </Link>
@@ -17,7 +17,7 @@ const Sidebar = ({ isLoggedIn }) => {
             isLoggedIn &&
             <Link to="/AddJob" className={classes.link}>
               <div className={classes.sidebarLinks}>
-                <i className="bi bi-plus-circle-fill fa-3x"></i>
+                <i className="bi bi-plus-circle-fill fs3"></i>
                 Add
               </div>
             </Link>
@@ -25,7 +25,7 @@ const Sidebar = ({ isLoggedIn }) => {
 
           <Link to="/savedJobs" className={classes.link}>
             <div className={classes.sidebarLinks}>
-              <i className="bi bi-floppy-fill fa-3x"></i>
+              <i className="bi bi-floppy-fill fs3"></i>
               Saved
             </div>
           </Link>
@@ -33,7 +33,7 @@ const Sidebar = ({ isLoggedIn }) => {
 
           <Link to="/appliedJobs" className={classes.link}>
             <div className={classes.sidebarLinks}>
-              <i className="bi bi-bag-check-fill"></i>
+              <i className="bi bi-bag-check-fill fs3"></i>
               Applied
             </div>
           </Link>
