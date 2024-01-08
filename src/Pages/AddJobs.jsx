@@ -272,7 +272,7 @@ const AddJobs = ({ getJobs }) => {
         </select>
       </label>
 
-      <button type="Submit">Submit</button>
+      <button className="submitButton" type="Submit">Submit</button>
     </form>
   );
 };

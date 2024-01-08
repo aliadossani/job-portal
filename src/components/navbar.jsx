@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import PortalLogo from "../assets/PortalLogo.png";
 import classes from "../styles/Navbar.module.css";
 
-const Navbar = ({ isLoggedIn, userEmail }) => {
+const Navbar = ({ isLoggedIn, setIsLoggedIn, userEmail }) => {
   return (
     <nav className={classes.navbar}>
       <div className={classes.container}>
         <div>
           <Link to="/">
-            <img className={classes.logo} src={logo} />
+            <img className={classes.logo} src={PortalLogo} />
           </Link>
         </div>
       </div>
@@ -17,7 +17,10 @@ const Navbar = ({ isLoggedIn, userEmail }) => {
         {
           isLoggedIn
             ?
-            <p>{userEmail}</p>
+            <div className={classes.loginCtn}>
+              <p>{userEmail}</p>
+              <a onClick={() => setIsLoggedIn(false)}>Log out</a>
+            </div>
             :
             <Link to="/login">Admin Login</Link>
         }

@@ -35,6 +35,22 @@ body {
 }
 
 .logo {
-  width: 70px;
+  width: 90px;
   height: auto;
+  padding: 10px;
+}
+
+.loginCtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 10px;
+  gap: 10px;
+
+}
+
+.loginCtn p {
+  border-right: 1px solid black;
+  padding-right: 10px
 }

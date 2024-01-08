@@ -37,7 +37,7 @@ select {
   border-radius: 5px;
 }
 
-button {
+.submitButton {
   background-color: #3498db;
   color: #fff;
   padding: 10px 20px;
@@ -45,6 +45,6 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
-button:hover {
+.submitButton:hover {
   background-color: #2a80b9;
 }
