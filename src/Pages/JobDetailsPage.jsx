@@ -24,36 +24,47 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
     const { currencySymbol, amount } = companyTotalFunding;
     return (
         <div className={classes.jobDetailsCtn}>
-            <img src={jobDetails.image} />
-            <div className={classes.jobDetailsSubCtn}>
-                <div className={classes.headerDetailsCtn}>
-                    <div className={classes.JobheaderCtn}>
-                        <h2>{companyName}</h2>
-                        <h3>{companyDescription}</h3>
-                        <p>{companyOverview}</p>
+
+            <div className={classes.detailsCtn}>
+                <div className={classes.allDetails}>
+                    <div className={classes.headerCtn}>
+                        <div className={classes.imageCtn}>
+                            <img src={jobDetails.image} />
+                        </div>
+
+                        <div className={classes.JobheaderCtn}>
+                            <h2>{companyName}</h2>
+                            <h3>{companyDescription}</h3>
+                        </div>
                     </div>
-                    <div className={classes.jobCtn}>
-                        <h2>Job</h2>
-                        <div className={classes.jobPositionCtn}>
-                            <h4>{jobPosition}</h4>
-                            <div className={classes.buttonCtn}>
-                                <p>{jobCreatedAt}</p>
-                                <button type="button" onClick={(event) => {
-                                    event.preventDefault();
-                                    saveJobHandler(jobDetails.jobId);
-                                }}
+                    <div className={classes.subHeaderCtn}>
+                        <div className={classes.jobDetailsSubCtn}>
+                            <p>{companyOverview}</p>
+                        </div>
+                        <div className={classes.jobCtn}>
+                            <h2>Job</h2>
+                            <div className={classes.jobPositionCtn}>
+                                <h4>{jobPosition}</h4>
+                                <div className={classes.buttonCtn}>
+                                    <p>{jobCreatedAt}</p>
+                                    <button type="button" onClick={(event) => {
+                                        event.preventDefault();
+                                        saveJobHandler(jobDetails.jobId);
+                                    }}
 
-                                >{jobDetails.isJobSaved ? "Unsave" : "Save"}</button>
-                                <button type="button" onClick={(event) => {
-                                    event.preventDefault();
-                                    applyJobHandler(jobDetails.jobId);
-                                }}
+                                    >{jobDetails.isJobSaved ? "Unsave" : "Save"}</button>
+                                    <button type="button" onClick={(event) => {
+                                        event.preventDefault();
+                                        applyJobHandler(jobDetails.jobId);
+                                    }}
 
-                                >{jobDetails.isApplied ? "Applied" : "Apply"}</button>
+                                    >{jobDetails.isApplied ? "Applied" : "Apply"}</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div className={classes.otherDetailsCtn}>
                     <div className={classes.socialLinksCtn}>
                         <h3>About {companyName}</h3>
@@ -87,9 +98,10 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
+
+
 
         </div>
     );
