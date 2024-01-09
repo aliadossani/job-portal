@@ -71,10 +71,10 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
                             <a>{website}</a>
                             <div className={classes.otherLinks}>
                                 <a className={classes.link} href={twitter} target="_blank" rel="noreferrer">
-                                    <i class="bi bi-twitter"></i>
+                                    <i className="bi bi-twitter"></i>
                                 </a>
                                 <a className={classes.link} href={linkedIn} target="_blank" rel="noreferrer">
-                                    <i class="bi bi-linkedin"></i>
+                                    <i className="bi bi-linkedin"></i>
                                 </a>
                             </div>
                         </div>
