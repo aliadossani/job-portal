@@ -8,7 +8,7 @@ import JobListing from "./Pages/JobListing";
 import JobDetailsPage from "./Pages/JobDetailsPage";
 import LoginPage from "./Pages/LoginPage";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import AddJobs from "./Pages/AddJobs";

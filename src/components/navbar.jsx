@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PortalLogo from "../assets/PortalLogo.png";
 import classes from "../styles/Navbar.module.css";
 
-const Navbar = ({ isLoggedIn, setIsLoggedIn, userEmail }) => {
+const navbar = ({ isLoggedIn, setIsLoggedIn, userEmail }) => {
   return (
     <nav className={classes.navbar}>
       <div className={classes.container}>
@@ -30,4 +30,4 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn, userEmail }) => {
   );
 };
 
-export default Navbar;
+export default navbar;
