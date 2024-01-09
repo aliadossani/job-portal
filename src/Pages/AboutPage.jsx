@@ -15,7 +15,7 @@ function About() {
           <div className="col-sm-6 col-md-4">
             <div className="team-item">
               <img
-                src="src/assets/AliaDossani.jpeg"
+                src="assets/AliaDossani.jpeg"
                 className="team-img"
                 alt="pic"
               />
@@ -45,7 +45,7 @@ function About() {
           <div className="col-sm-6 col-md-4">
             <div className="team-item">
               <img
-                src="src/assets/prabeshikaProfile.jpg"
+                src="assets/prabeshikaProfile.jpg"
                 className="team-img"
                 alt="pic"
               />
