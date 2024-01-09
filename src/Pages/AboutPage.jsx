@@ -1,4 +1,5 @@
 import "../styles/About.css";
+import AliaImage from "../assets/AliaDossani.jpeg";
 
 function About() {
   return (
@@ -15,7 +16,7 @@ function About() {
           <div className="col-sm-6 col-md-4">
             <div className="team-item">
               <img
-                src="assets/AliaDossani.jpeg"
+                src={AliaImage}
                 className="team-img"
                 alt="pic"
               />
