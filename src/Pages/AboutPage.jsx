@@ -1,5 +1,6 @@
 import "../styles/About.css";
 import AliaImage from "../assets/AliaDossani.jpeg";
+import PrabeshikaImage from "../assets/prabeshikaProfile.jpg";
 
 function About() {
   return (
@@ -46,7 +47,7 @@ function About() {
           <div className="col-sm-6 col-md-4">
             <div className="team-item">
               <img
-                src="assets/prabeshikaProfile.jpg"
+                src={PrabeshikaImage}
                 className="team-img"
                 alt="pic"
               />
