@@ -1,1 +1,1 @@
-export const API_BASE_URL = process.env.VITE_api_base_url || "http://localhost:8000/jobs";
+export const API_BASE_URL = import.meta.env.VITE_api_base_url || "http://localhost:8000/jobs";
