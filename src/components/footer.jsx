@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "../styles/Footer.module.css";
 
-const Footer = () => {
+const footer = () => {
     return (
         <footer className={classes.footerCtn}>
             <div className={classes.footerElements}>
@@ -20,4 +20,4 @@ const Footer = () => {
     );
 }
 
-export default Footer;
+export default footer;

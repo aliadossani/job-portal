@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "../styles/Sidebar.module.css";
 
-const Sidebar = ({ isLoggedIn }) => {
+const sidebar = ({ isLoggedIn }) => {
   return (
     <div className={classes.sidebarContainer}>
       <ul>
@@ -43,4 +43,4 @@ const Sidebar = ({ isLoggedIn }) => {
   );
 };
 
-export default Sidebar;
+export default sidebar;

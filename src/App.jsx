@@ -9,8 +9,8 @@ import JobDetailsPage from "./Pages/JobDetailsPage";
 import LoginPage from "./Pages/LoginPage";
 
 import Navbar from "./components/navbar";
-import Footer from "./components/Footer";
-import Sidebar from "./components/Sidebar";
+import Footer from "./components/footer";
+import Sidebar from "./components/sidebar";
 import AddJobs from "./Pages/AddJobs";
 
 import classes from "./styles/App.module.css";
