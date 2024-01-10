@@ -68,14 +68,20 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
                         <h3>About {companyName}</h3>
                         <h4>Website</h4>
                         <div className={classes.linkContainer}>
-                            <a>{website}</a>
+                            {website && <a>{website}</a>}
                             <div className={classes.otherLinks}>
-                                <a className={classes.link} href={twitter} target="_blank" rel="noreferrer">
-                                    <i className="bi bi-twitter"></i>
-                                </a>
-                                <a className={classes.link} href={linkedIn} target="_blank" rel="noreferrer">
-                                    <i className="bi bi-linkedin"></i>
-                                </a>
+                                {
+                                    twitter &&
+                                    <a className={classes.link} href={twitter} target="_blank" rel="noreferrer">
+                                        <i className="bi bi-twitter"></i>
+                                    </a>
+                                }
+                                {
+                                    linkedIn &&
+                                    <a className={classes.link} href={linkedIn} target="_blank" rel="noreferrer">
+                                        <i className="bi bi-linkedin"></i>
+                                    </a>
+                                }
                             </div>
                         </div>
 
