@@ -29,7 +29,7 @@ const JobCard = ({ job, deleteJobHandler, saveJobHandler, showDeleteButton, isLo
 
                     <div className={classes.tagsContainer}>
                         {
-                            tags.length && tags.map((tag, index) => {
+                            tags?.length && tags.map((tag, index) => {
                                 const { name, textColor, backgroundColor } = tag;
                                 return (
                                     <div className={classes.tagContainer} key={index} style={{
