@@ -1,0 +1,15 @@
+.errorScreen {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    background-color: white;
+}
+
+.errorScreen img {
+    height: auto;
+    max-width: 30vw;
+    place-items: center;
+    margin: 0;
+    flex: 1;
+    object-fit: contain;
+}

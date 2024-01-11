@@ -1,8 +1,9 @@
-import image from "../assets/error.avif";
+import image from "../assets/Error404.jpeg";
+import classes from "../styles/Error404Page.module.css";
 
 const Error404Page = () => {
   return (
-    <div className="cont-404">
+    <div className={classes.errorScreen}>
       <img src={image} alt="No page found" />
     </div>
   );
