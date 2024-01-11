@@ -71,7 +71,7 @@ function App() {
     <div className={classes.rootCnt}>
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} userEmail={userEmail} />
       {
-        !isLoading && (
+        !isLoading ? (
           <div className={classes.mainCnt}>
             <div className={classes.routesContainer}>
               <Sidebar isLoggedIn={isLoggedIn} />
@@ -140,7 +140,9 @@ function App() {
               </Routes>
             </div>
           </div>
-        )}
+        )
+          :
+          <>loading</>}
 
       <Footer />
     </div>

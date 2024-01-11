@@ -16,7 +16,9 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
     }, []);
 
     if (!jobDetails) {
-        return null;
+        return (
+            <>Could not find the Job Details</>
+        );
     }
     const { socialLinks, companyName, companyDescription, companyOverview, jobLocation, companySize, companyTotalFunding, jobPosition, jobCreatedAt } = jobDetails;
     const { website, twitter, linkedIn } = socialLinks;
