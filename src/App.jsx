@@ -1,6 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import { Routes, Route } from "react-router-dom";
 import axios from "axios";
+import BeatLoader from "react-spinners/BeatLoader";
 
 import AboutPage from "./Pages/AboutPage";
 import Error404Page from "./Pages/Error404Page";
@@ -16,7 +17,17 @@ import AddJobs from "./Pages/AddJobs";
 import classes from "./styles/App.module.css";
 import { API_BASE_URL } from "./constants";
 
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
+
+
 function App() {
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#268bff");
+
   const [jobs, setJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -142,7 +153,16 @@ function App() {
           </div>
         )
           :
-          <>loading</>}
+          <div className={classes.loading}>
+            <BeatLoader
+              color={color}
+              loading={loading}
+              cssOverride={override}
+              size={100}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          </div>}
 
       <Footer />
     </div>

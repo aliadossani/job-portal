@@ -17,7 +17,7 @@ const JobDetailsPage = ({ jobList, saveJobHandler, applyJobHandler }) => {
 
     if (!jobDetails) {
         return (
-            <>Could not find the Job Details</>
+            <div className={classes.noJobDetails}>Could not find the Job Details</div>
         );
     }
     const { socialLinks, companyName, companyDescription, companyOverview, jobLocation, companySize, companyTotalFunding, jobPosition, jobCreatedAt } = jobDetails;

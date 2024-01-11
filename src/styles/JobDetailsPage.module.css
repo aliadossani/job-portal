@@ -171,3 +171,11 @@ a:hover {
 .detailsCtn {
     display: flex;
 }
+
+.noJobDetails {
+    display: grid;
+    width: 100%;
+    place-items: center;
+    font-weight: bold;
+    margin: 0;
+}
